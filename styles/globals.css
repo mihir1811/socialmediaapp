@@ -1,26 +1,119 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --sidebar-bg:lightgray !important;
+    --color-text-primary: #27201a;
+    --color-text-secondary: #076963;
+    --color-bg-primary: #fff;
+    --color-bg-toggle: #1e90ff;
+    --header-bg:lightgray
+}
+
+[data-theme="dark"]{
+    --sidebar-bg:#222 !important;
+    --color-text-primary: #e3e3e3;
+    --color-text-secondary: #ff6b00;
+    --color-bg-primary: black;
+    --color-bg-toggle: #a9a9a9;
+    --header-bg:#222
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-family: sans-serif;
+    transition: background 0.25s ease-in-out;
+} 
+  
+header{
+    background-color: var(--header-bg);
+    transition: all 0.25s ease-in-out;;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h1 {
+    color: var(--color-text-primary);
+    transition: all 0.25s ease-in-out;;
 }
 
-* {
-  box-sizing: border-box;
+/* font-size */
+.fntSz10{
+  font-size: 10px
+}
+.fntSz11{
+  font-size: 11px
+}
+.fntSz12{
+  font-size: 12px
+}
+.fntSz13{
+  font-size: 13px
+}
+.fntSz14{
+  font-size: 14px
+}
+.fntSz15{
+  font-size: 15px
+}
+.fntSz16{
+  font-size: 16px
+}
+.fntSz17{
+  font-size: 17px
+}
+.fntSz18{
+  font-size: 18px
+}
+.fntSz19{
+  font-size: 19px
+}
+.fntSz20{
+  font-size: 20px
+}
+.fntSz21{
+  font-size: 21px
+}
+.fntSz22{
+  font-size: 22px
+}
+.fntSz23{
+  font-size: 23px
+}
+.fntSz24{
+  font-size: 24px
+}
+.fntSz25{
+  font-size: 25px
+}
+.fntSz26{
+  font-size: 26px
+}
+.fntSz27{
+  font-size: 27px
+}
+.fntSz28{
+  font-size: 28px
+}
+.fntSz29{
+  font-size: 29px
+}
+.fntSz30{
+  font-size: 30px
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+/* font-weights */
+.fw400{
+  font-weight: 400;
 }
+.fw500{
+  font-weight: 500;
+}
+.fw600{
+  font-weight: 600;
+}
+.fwBold{
+  font-weight: bold;
+}
+
+/* font families */
