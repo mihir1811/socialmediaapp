@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useRouter } from 'next/router';
 import Link from "next/link"
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import axios from 'axios';
+import { registrationApi } from '../services/auth';
+import ToastMsg from '../components/Snackbar';
 
 const Register = () => {
+    const router = useRouter()
+
   return (
     <div className='flex items-center justify-center h-screen w-screen'>
         <div className='border' style={{width:"400px" , borderRadius:"10px" ,padding:"20px"}}>
@@ -22,43 +27,21 @@ const Register = () => {
                     console.log(values)
                     const {username ,phone ,email ,password ,confirmPassword}= values;
 
-                    // if(password === confirmPassword){
-                        // await fetch("http://localhost:9090/registration" , {
-                        //     method:"POST" ,
-                        //     headers:{
-                        //         "Content-Type":"application/json"
-                        //     },
-                        //     body:JSON.stringify({
-                        //        name: username,
-                        //        phone:phone ,
-                        //        email:email ,
-                        //        password:password
-                        //     })
-                            
-                        //     // credentials: "include",
-                        // })
-                    // }else{
-                    //     window.alert("password and conform password not matched")
-                    // }
-
-                    const res = await axios({
-                        method:"post",
-                        url:"http://localhost:9090/registration",
-                        headers: { "Content-Type": "application/json" },
-                        data:{
+                    if(password === confirmPassword){
+                        const payload = {
                             name: username,
-                            phone:phone ,
+                            phone:Number(phone) ,
                             email:email ,
                             password:password
                         }
-                    })
-                    const data  = await res.json()
-                    console.log(res)
+                        const res = await registrationApi(payload)
+                        // if(res.status === 200){
+                        //     alert(res.data.message )
+                        // }
+                        router.push("/login")
 
-
-
-                    if(!data){
-                        window.alert("not registered")
+                    }else{
+                        window.alert("password and conform password not matched")
                     }
                 }}
 
@@ -101,7 +84,7 @@ const Register = () => {
                         </Form>
                     )
                 }}
-
+           
             </Formik>
             <p className='fntSz12 text-right mt-2'>Already Registered? <Link href="/login" className='text-blue-400'>Login</Link></p>
         </div>
