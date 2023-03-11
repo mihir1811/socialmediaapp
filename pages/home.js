@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React, { useEffect } from 'react'
 import axios from 'axios'
 import Head from 'next/head'
+import Posts from '../components/posts/Posts'
 
 function Home() {
 
@@ -13,7 +14,9 @@ function Home() {
       </Head>
       <div className='flex w-[100%]'>
         <div className='w-[23%] w-max-[244px] bg-slate-200 h-screen'></div>
-        <div className='w-[77%] h-screen'></div>
+        <div className='w-[77%] h-screen'>
+          <Posts />
+        </div>
         {/* <Link href="/contact"> contact</Link> */}
       </div>
     </>
