@@ -6,11 +6,10 @@ const Posts = () => {
     const [posts , setPosta] = useState(postData)
 
   return (
-    <div style={{height:"100%" ,overflowY:"scroll"}}>
+    <div style={{height:"100%" ,overflowY:"scroll" }} className="max-w-[700px] mx-auto scrollbar-hide">
         {
             posts.length > 0 && posts.map((post ,i)=>{
                 return <div key={i}>
-                    {console.log(post)}
                     <SinglePost post={post} />
                 </div>  
             })

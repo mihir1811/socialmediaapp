@@ -1,14 +1,50 @@
 export const postData = [
     {
-        id:"emeoimfio2i2meiio2edi",
-        firstName:"jay",
-        lastName:"kheni", 
+        id:1,
+        firstName:"Tony",
+        lastName:"Stark", 
         userName:"jk",
-        email:"jay@gmail.com",
+        email:"jarvis@gmail.com",
         likes:3,
         comments:89,
         isFollew:true,
-        profilePic:"https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg",
-        postImage:"https://theworldpursuit.com/wp-content/uploads/2020/04/Best-Road-Trips-in-the-world-scaled.jpeg"
+        profilePic:"/images/profilepic.png",
+        postImage:"/images/ironmanpost.jpg"
+    },
+    {
+        id:2,
+        firstName:"cristiano",
+        lastName:"ronaldo", 
+        userName:"cr7",
+        email:"cristiano@gmail.com",
+        likes:3,
+        comments:89,
+        isFollew:true,
+        profilePic:"/images/ronaldo.jpeg",
+        postImage:"/images/ronaldo.jpg"
+    },
+    {
+        id:3,
+        firstName:"Peter",
+        lastName:"Parker", 
+        userName:"spider_man",
+        email:"peter@gmail.com",
+        likes:3,
+        comments:89,
+        isFollew:true,
+        profilePic:"/images/spidermanprofile.jpeg",
+        postImage:"/images/spidermanprofile.jpeg"
+    },
+    {
+        id:4,
+        firstName:"Zyan",
+        lastName:"Malik", 
+        userName:"zyan",
+        email:"zyan@gmail.com",
+        likes:3,
+        comments:89,
+        isFollew:true,
+        profilePic:"/images/zyanprofilepic.jpeg",
+        postImage:"/images/zyanpost.jpg"
     },
 ]

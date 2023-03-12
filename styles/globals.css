@@ -1,4 +1,9 @@
 @tailwind base;
+
+/* post css */
+.postImageContainer >img{
+  position:relative !important
+}
 @tailwind components;
 @tailwind utilities;
 
@@ -117,3 +122,16 @@ h1 {
 }
 
 /* font families */
+
+/* hide scroll bar */
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

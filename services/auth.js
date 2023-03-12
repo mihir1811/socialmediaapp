@@ -4,8 +4,6 @@ import Cookies from "js-cookie"
 
 const jwt_Token = Cookies.get("JWT_TOKEN")
 
-console.log(jwt_Token ,"vsdcsdcsd")
-
 export const commenHeader = {
     "Content-Type": "application/json",
 }
