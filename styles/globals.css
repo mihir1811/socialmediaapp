@@ -29,7 +29,8 @@
 body {
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: cursive;
   transition: background 0.25s ease-in-out;
 } 
   
