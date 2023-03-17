@@ -10,17 +10,17 @@ const SinglePost = ({post}) => {
   return (
     <>
       <div className='postHeader flex justify-between items-center py-2 px-3'>
-        <div className='flex'>
-        <Image
-          src={post?.profilePic}
-          alt="profile pic"
-          width={50}
-          height={50}
-          style={{borderRadius:"50%"}}
-        />
+        <div className='flex items-center'>
+          <Image
+            src={post?.profilePic}
+            alt="profile pic"
+            width={50}
+            height={50}
+            style={{borderRadius:"50%" }}
+            className="h-[50px] w-[50px]"
+          />
           <div>
-            <p className='m-0 p-0 text-black'>{post?.firstName}</p>
-            <p className='m-0 p-0 text-black'>{post?.lastName}</p>
+            <p className='m-0 p-0 pl-2 text-black'>{post?.firstName} {post?.lastName}</p>
           </div>
         </div>
         <div>
@@ -28,13 +28,14 @@ const SinglePost = ({post}) => {
         </div>
       </div>
       <div className='relative w-full postImageContainer'>
-        <Image
+        {/* <Image
           src={post?.postImage}
           layout="fill"
           objectFit="cover"
           alt="profile pic"
           fill
-        />
+        /> */}
+        <img src={post?.postImage} alt="profile pic" />
       </div>
       <div className='flex justify-between items-center py-2 px-3'> 
         <div className='flex'>

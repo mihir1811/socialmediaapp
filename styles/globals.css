@@ -1,110 +1,117 @@
 @tailwind base;
-
-/* post css */
-.postImageContainer >img{
-  position:relative !important
-}
 @tailwind components;
 @tailwind utilities;
+/* post css */
 
 :root{
-    --sidebar-bg:lightgray !important;
-    --color-text-primary: #27201a;
-    --color-text-secondary: #076963;
-    --color-bg-primary: #fff;
-    --color-bg-toggle: #1e90ff;
-    --header-bg:lightgray
+  --sidebar-bg:lightgray !important;
+  --color-text-primary: #27201a;
+  --color-text-secondary: #076963;
+  --color-bg-primary: #fff;
+  --color-bg-toggle: #1e90ff;
+  --header-bg:lightgray;
+  --sidebar-bg:lightgray;
+  --sidebar-hover-bg:rgba(0 ,0 ,0 ,0.3)
 }
 
 [data-theme="dark"]{
-    --sidebar-bg:#222 !important;
-    --color-text-primary: #e3e3e3;
-    --color-text-secondary: #ff6b00;
-    --color-bg-primary: black;
-    --color-bg-toggle: #a9a9a9;
-    --header-bg:#222
+  --sidebar-bg:#222 !important;
+  --color-text-primary: #e3e3e3;
+  --color-text-secondary: #ff6b00;
+  --color-bg-primary: black;
+  --color-bg-toggle: #a9a9a9;
+  --header-bg:#222;
+  --sidebar-bg:#222;
+  --sidebar-hover-bg:rgba(250 ,250 ,250 ,0.3)
+
 }
 
 body {
-    background: var(--color-bg-primary);
-    color: var(--color-text-primary);
-    font-family: sans-serif;
-    transition: background 0.25s ease-in-out;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: sans-serif;
+  transition: background 0.25s ease-in-out;
 } 
   
 header{
-    background-color: var(--header-bg);
-    transition: all 0.25s ease-in-out;;
+  background-color: var(--header-bg);
+  transition: all 0.25s ease-in-out;;
 }
 
 h1 {
-    color: var(--color-text-primary);
-    transition: all 0.25s ease-in-out;;
+  color: var(--color-text-primary);
+  transition: all 0.25s ease-in-out;
+}
+*{
+  color:var(--color-text-primary)
+}
+p , li{
+ color: var(--color-text-primary)
 }
 
 /* font-size */
 .fntSz10{
-  font-size: 10px
+  font-size: 0.625rem
 }
 .fntSz11{
-  font-size: 11px
+  font-size: 0.688rem
 }
 .fntSz12{
-  font-size: 12px
+  font-size: 0.75rem
 }
 .fntSz13{
-  font-size: 13px
+  font-size: 0.813rem
 }
 .fntSz14{
-  font-size: 14px
+  font-size: 0.875rem
 }
 .fntSz15{
-  font-size: 15px
+  font-size: 0.938rem
 }
 .fntSz16{
-  font-size: 16px
+  font-size: 1rem
 }
 .fntSz17{
-  font-size: 17px
+  font-size: 1.063rem
 }
 .fntSz18{
-  font-size: 18px
+  font-size: 1.125rem
 }
 .fntSz19{
-  font-size: 19px
+  font-size: 1.188rem
 }
 .fntSz20{
-  font-size: 20px
+  font-size: 1.25rem
 }
 .fntSz21{
-  font-size: 21px
+  font-size: 1.313rem
 }
 .fntSz22{
-  font-size: 22px
+  font-size: 1.375rem
 }
 .fntSz23{
-  font-size: 23px
+  font-size: 1.438rem
 }
 .fntSz24{
-  font-size: 24px
+  font-size: 1.5rem
 }
 .fntSz25{
-  font-size: 25px
+  font-size: 1.563rem
 }
 .fntSz26{
-  font-size: 26px
+  font-size: 1.625rem
 }
 .fntSz27{
-  font-size: 27px
+  font-size: 1.688rem
 }
 .fntSz28{
-  font-size: 28px
+  font-size: 1.75rem
 }
 .fntSz29{
-  font-size: 29px
+  font-size: 1.813rem
 }
 .fntSz30{
-  font-size: 30px
+  font-size: 1.875rem
 }
 
 /* font-weights */
@@ -135,3 +142,7 @@ h1 {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.postImageContainer >img{
+  @layer relative
+ }

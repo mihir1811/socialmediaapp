@@ -63,16 +63,19 @@ const ThemeToggle = () => {
 
   return (
     <>
-        <ToggleButton className="flex justify-center items-center bg-white rounded-full toggle_container" type="button" onClick={() => setActiveTheme(inactiveTheme)}>
+        <ToggleButton className="rounded-full toggle_container" type="button" onClick={() => setActiveTheme(inactiveTheme)}>
         <ToggleThumb activeTheme={activeTheme} className="themeChangeIcon" />
         {
-          activeTheme=== "light" ?<span className="text-black"><BsFillMoonFill className="themeChangeIcon" /></span>:<span className="text-black"><BsFillSunFill className="themeChangeIcon" /></span>
+          activeTheme=== "light" ?<span className="text-black"><BsFillMoonFill className="themeChangeIcon fntSz30" /></span>:<span className="text-black"><BsFillSunFill className="themeChangeIcon fntSz30" /></span>
         }
 
         <style>
           {`
           .toggle_container{
-            justify-content: center !important;
+            // justify-content: center !important;
+            padding:0;
+            height:100%;
+            width:100%;
             transition: all 0.25s ease-in-out;
           }
           .themeChangeIcon{
