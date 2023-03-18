@@ -44,7 +44,6 @@ const SinglePost = ({post}) => {
         </div>
           <BiBookmark className='fntSz25' /> 
       </div>
-      <hr />
       <style jsx>
         {`
           .postImageContainer >img{

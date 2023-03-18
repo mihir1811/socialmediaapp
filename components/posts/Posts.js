@@ -16,10 +16,10 @@ const Posts = () => {
                 })
             }
         </div>
-        <div className='w-[30%] bg-[gray] h-screen lg:block hidden'>
+        {/* <div className='w-[30%] bg-[gray] h-screen lg:block hidden'>
             <h3>Chat</h3>
 
-        </div>
+        </div> */}
     </div>
   )
 }

@@ -5,6 +5,10 @@ import Head from 'next/head'
 import Posts from '../components/posts/Posts'
 import Header from '../components/header/Header'
 import Sidebar from '../components/Sidebar'
+import { AiOutlineHome, AiOutlineSearch } from 'react-icons/ai'
+import { BiBell, BiMoviePlay } from 'react-icons/bi'
+import { RiMessengerLine } from 'react-icons/ri'
+import ThemeToggle from '../components/ThemeToggle'
 
 function Home() {
 
@@ -24,6 +28,14 @@ function Home() {
         </div>
         {/* <Link href="/contact"> contact</Link> */}
       </div>
+      <ul className='2xs:flex sm:hidden xs:hidden hidden justify-around fixed bottom-0 bg-white w-full'> 
+        <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><AiOutlineHome className='fntSz30' /></li>
+        <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><AiOutlineSearch className='fntSz30' /></li>
+        <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><BiMoviePlay className='fntSz30' /></li>
+        <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><RiMessengerLine className='fntSz30' /></li>
+        <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><BiBell className='fntSz30' /> </li>
+        <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><ThemeToggle className='fntSz30' /></li>
+      </ul>
     </>
   )
 }
