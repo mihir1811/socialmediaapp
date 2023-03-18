@@ -145,5 +145,24 @@ p , li{
 }
 
 .postImageContainer >img{
+  @layer relative;
+ }
+
+ body::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+ 
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.postImageContainer >img{
   @layer relative
  }

@@ -19,11 +19,17 @@ function Home() {
         <title>Home</title>
       </Head>
       {/* <Header /> */}
-      <div className='flex w-[100%]'>
-        <div className='sidebar_container duration-700 2xl:w-[300px] xl:w-[300px] lg:w-[280px] md:w-[280px] sm:-[200px] xs:w-[70px] hidden md:block xl:block lg:block xs:block bg-[var(--sidebar-bg)] h-screen'>
+
+      <header className='h-[70px] xs:hidden fixed top-0 z-10 sm:hidden  w-full bg-slate-500 flex items-center justify-between'>
+        <h3 className='p-0 m-0'>Logo</h3>
+        <p>icons</p>
+      </header>
+      {/* <div className='flex w-[100%] mt-[70px] xs:mt-0 xs:h-[100vh] h-[calc(100vh_-_70px)]'> */}
+      <div className='flex w-[100%] mt-[70px] mb-[50px] xs:mb-0 xs:mt-0 xs:h-[100vh] '>
+        <div className='sidebar_container duration-700 2xl:w-[300px] xl:w-[300px] lg:w-[280px] md:w-[280px] sm:-[200px] xs:w-[70px] hidden md:block xl:block lg:block xs:block bg-[var(--sidebar-bg)] h-full'>
           <Sidebar/>
         </div>
-        <div className='xl:w-[80%] lg:w-[calc(100vw_-_20%)] md:w-[calc(100vw_-_60px)] xs:w-[calc(100vw_-_60px)] overflow-y-auto h-screen'>
+        <div className='xl:w-[80%] lg:w-[calc(100vw_-_20%)] md:w-[calc(100vw_-_60px)] xs:w-[calc(100vw_-_60px)] overflow-y-auto h-full'>
           <Posts />
         </div>
         {/* <Link href="/contact"> contact</Link> */}
@@ -34,7 +40,7 @@ function Home() {
         <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><BiMoviePlay className='fntSz30' /></li>
         <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><RiMessengerLine className='fntSz30' /></li>
         <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><BiBell className='fntSz30' /> </li>
-        <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><ThemeToggle className='fntSz30' /></li>
+        {/* <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><ThemeToggle className='fntSz30' /></li> */}
       </ul>
     </>
   )

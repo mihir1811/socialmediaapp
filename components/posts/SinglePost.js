@@ -5,6 +5,8 @@ import { HeartOutlinedIcon } from '../../lib/config'
 import{AiOutlineHeart} from"react-icons/ai"
 import {FaRegComments} from "react-icons/fa"
 import Image from 'next/image'
+import { sendPostIcon } from '../../lib/config'
+import { FiSend } from 'react-icons/fi'
 
 const SinglePost = ({post}) => {
   return (
@@ -41,6 +43,7 @@ const SinglePost = ({post}) => {
         <div className='flex'>
           <AiOutlineHeart className='fntSz25 mx-1' />
           <FaRegComments className='fntSz25 mx-1' />
+          <FiSend className='fntSz25 mx-1' />
         </div>
           <BiBookmark className='fntSz25' /> 
       </div>

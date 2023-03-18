@@ -4,7 +4,7 @@ import Cookies from "js-cookie"
 
 const jwt_Token = Cookies.get("JWT_TOKEN")
 
-export const commenHeader = {
+export const commenHeaders = {
     "Content-Type": "application/json",
 }
 
@@ -27,10 +27,10 @@ export const getUrl = (endpoint, apiConfig = {}) => {
 
 export const postWithToken = async (endpoint, data, otherHeaders, apiConfig = {}) => {
 	axios.defaults.headers.common["authorization"] = await ParseToken(
-		getCookie("token", "") || basic
+		Cookies.get("jwtToken") 
 	);
 	return axios.post(getUrl(endpoint, apiConfig), data, {
-		headers: { ...commonHeader, ...otherHeaders },
+		headers: { ...commenHeaders, ...otherHeaders },
 	});
 };
 
@@ -38,20 +38,20 @@ export const postWithToken = async (endpoint, data, otherHeaders, apiConfig = {}
 export const registrationApi = async (payload) =>{
     const res = await axios({
         method:"post",
-        url:`${url}/user/registration`,
+        url:`${url}/auth/registration`,
         headers: { "Content-Type": "application/json" },
         data:JSON.stringify(payload)
     })
-    return res
+    return res;
 }
 
 export const loginApi =async (payload) =>{
     const res = await axios({
         method:"post",
-        url:`${url}/user/login`,
+        url:`${url}/auth/login`,
         headers: { "Content-Type": "application/json" },
         data:JSON.stringify(payload),
         withCredentials:true
     } )
-    return res
+    return res;
 }

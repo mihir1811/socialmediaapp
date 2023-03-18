@@ -6,6 +6,7 @@ import { loginApi } from "../services/auth";
 import Link from "next/link";
 import Head from "next/head";
 import { useFormik } from "formik";
+import Cookies from "js-cookie";
 
 const Login = () => {
   const router = useRouter();
@@ -30,10 +31,8 @@ const Login = () => {
               password,
             };
             const res = await loginApi(payload);
-
-            if (!res) {
-              setFieldError("email", "please enter valid crdrdentials");
-            }
+            // Cookies.set("jwtToken" ,  res.data.token)
+            console.log(res , "aergaerjthsryjndethgf")
             // console.log(res.data.token , "atrhszrytdgf")
             router.push("/home");
           }}
