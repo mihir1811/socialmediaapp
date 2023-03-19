@@ -1,31 +1,29 @@
 import React, { useEffect, useState } from 'react'
-import io from "socket.io-client"
+import { io } from 'socket.io-client';
 
-const socket  = io()
+const socket  = io("http://localhost:9090" ,{transports : ['websocket']});
 
 const Chat = () => {
-
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
 
-  useEffect(() => {
-    // Listen for incoming messages
-    socket.on('chat message', (msg) => {
-      setMessages((prevState) => [...prevState, msg]);
-    });
+  // useEffect(() => {
 
-    return () => {
-      socket.off('chat message');
-    };
-  }, []);
+  //   socket.on("connectcted")
+
+  // }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue.trim() !== '') {
-      socket.emit('chat message', inputValue);
+      // socket.emit('chat message', inputValue);
+      socket.emit("sendMessage" , {message : inputValue})
+      socket.send("hello")
       setInputValue('');
     }
   };
+
+  socket.on("messageList" ,)
 
   return (
     <div>
