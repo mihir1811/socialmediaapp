@@ -6,12 +6,10 @@ import { loginApi } from "../services/auth";
 import Link from "next/link";
 import Head from "next/head";
 import { useFormik } from "formik";
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 
 const Login = () => {
   const router = useRouter();
-
-  const { setFieldError } = useFormik({});
 
   return (
     <>
@@ -55,7 +53,7 @@ const Login = () => {
               isValidating,
             } = props;
             return (
-              <Form method="POST">
+              <Form method="POST" className="w-[400px]">
                 <input
                   className="w-full py-1 px-2 border rounded-md mb-2"
                   onChange={handleChange}
@@ -66,7 +64,7 @@ const Login = () => {
                   autoComplete="off"
                 />
                 {
-                  errors.email && touched.email && <p>enter valid email</p>
+                  errors.email && touched.email && <p className='p-0 m-0 text-red-600 fntSz13'>enter valid email</p>
                 }
                 <input
                   className="w-full py-1 px-2 border rounded-md mb-2"
@@ -78,7 +76,7 @@ const Login = () => {
                   autoComplete="off"
                 />
                 {
-                  errors.password && touched.password && <p>enter valid password</p>
+                  errors.password && touched.password && <p className='p-0 m-0 text-red-600 fntSz13'>enter valid password</p>
                 }
                 <button
                   disabled={!isValid}

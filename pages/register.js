@@ -75,17 +75,27 @@ const Register = () => {
                         } = props
                         return(
                             <Form method='POST'>
-                                <input className='w-full py-1 px-2 border rounded-md mb-2'  onChange={handleChange} type="text" name="username" placeholder='User Name*' autoComplete='off' />
-                                {/* {errors.username && <p className='text-red-500'>Required</p>} */}
-                                <input className='w-full py-1 px-2 border rounded-md mb-2' onChange={handleChange} type="text" name="phone" placeholder='Phone No.*' autoComplete='off' />
-                                {/* {errors.phone && <p className='text-red-500 fntSz12'>Required</p>} */}
-                                <input className='w-full py-1 px-2 border rounded-md mb-2' onChange={handleChange} type="text" name="email" placeholder='E-mail*' autoComplete='off' />
-                                {/* {errors.email && <p className='text-red-500 fntSz12'>Required</p>} */}
-                                <input className='w-full py-1 px-2 border rounded-md mb-2' onChange={handleChange} type="text" name="password" placeholder='Password*' autoComplete='off' />
-                                {/* {errors.password && <p className='text-red-500 fntSz12'>Required</p>} */}
-                                <input className='w-full py-1 px-2 border rounded-md mb-2' onChange={handleChange} type="text" name="confirmPassword" placeholder='conform password*' autoComplete='off' />
-                                {/* {errors.confirmPassword && <p className='text-red-500 fntSz12'>Required</p>} */}
-                                <button type='submit' className='bg-black text-white hover:bg-white hover:text-black hover:border border py-2 px-5 border-black rounded-md w-full'>Register</button>
+                                <input className='w-full py-1 px-2 border rounded-md mb-2' onBlur={handleBlur}  onChange={handleChange} type="text" name="username" placeholder='User Name*' autoComplete='off' />
+                                {
+                                    errors.username && touched.username && <p className='p-0 m-0 text-red-600 fntSz13'>enter valid email</p>
+                                }
+                                <input className='w-full py-1 px-2 border rounded-md mb-2' onBlur={handleBlur} onChange={handleChange} type="text" name="phone" placeholder='Phone No.*' autoComplete='off' />
+                                {
+                                    errors.phone && touched.phone && <p className='p-0 m-0 text-red-600 fntSz13'>enter valid Phone number</p>
+                                }
+                                <input className='w-full py-1 px-2 border rounded-md mb-2' onBlur={handleBlur} onChange={handleChange} type="text" name="email" placeholder='E-mail*' autoComplete='off' />
+                                {
+                                    errors.email && touched.email && <p className='p-0 m-0 text-red-600 fntSz13'>enter valid email</p>
+                                }
+                                <input className='w-full py-1 px-2 border rounded-md mb-2' onBlur={handleBlur} onChange={handleChange} type="text" name="password" placeholder='Password*' autoComplete='off' />
+                                {
+                                    errors.password && touched.password && <p className='p-0 m-0 text-red-600 fntSz13'>enter valid password</p>
+                                }
+                                <input className='w-full py-1 px-2 border rounded-md mb-2' onBlur={handleBlur} onChange={handleChange} type="text" name="confirmPassword" placeholder='conform password*' autoComplete='off' />
+                                {
+                                    errors.confirmPassword && touched.confirmPassword && <p className='p-0 m-0 text-red-600 fntSz13'>enter valid email</p>
+                                }
+                                <button disabled={!isValid} type='submit' className='bg-black text-white hover:bg-white hover:text-black hover:border border py-2 px-5 border-black rounded-md w-full'>Register</button>
                             </Form>
                         )
                     }}
