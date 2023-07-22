@@ -72,7 +72,7 @@ const ThemeToggle = () => {
         <style>
           {`
           .toggle_container{
-            // justify-content: center !important;
+            justify-content: center !important;
             padding:0;
             height:100%;
             width:100%;

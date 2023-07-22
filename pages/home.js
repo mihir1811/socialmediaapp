@@ -13,11 +13,11 @@ function Home() {
   const auth = Cookies.get("jwtToken")
   const router = useRouter()
 
-  useEffect(()=>{
-    if(!auth){
-      router.push("/login ")
-    }
-  } ,[auth])
+  // useEffect(()=>{
+  //   if(!auth){
+  //     router.push("/login ")
+  //   }
+  // } ,[auth])
 
   const logout = () =>{
     console.log("user logged out")
@@ -41,7 +41,7 @@ function Home() {
       </header>
       {/* <div className='flex w-[100%] mt-[70px] xs:mt-0 xs:h-[100vh] h-[calc(100vh_-_70px)]'> */}
       <div className='flex w-[100%] mt-[70px] mb-[50px] xs:mb-0 xs:mt-0 xs:h-[100vh] '>
-        <div className='sidebar_container duration-700 2xl:w-[300px] xl:w-[300px] lg:w-[280px] md:w-[280px] sm:-[200px] xs:w-[70px] hidden md:block xl:block lg:block xs:block bg-[var(--sidebar-bg)] h-full'>
+        <div className='sidebar_container duration-700 2xl:w-[300px] xl:w-[300px] lg:w-[280px] md:w-[280px] sm:-[200px] xs:w-[70px] hidden md:block xl:block lg:block xs:block bg-[var(--sidebar-bg)] h-full relative'>
           <Sidebar logout={logout} />
         </div>
         <div className='xl:w-[80%] lg:w-[calc(100vw_-_20%)] md:w-[calc(100vw_-_60px)] xs:w-[calc(100vw_-_60px)] overflow-y-auto h-full'>
