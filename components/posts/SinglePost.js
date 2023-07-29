@@ -26,7 +26,7 @@ const SinglePost = ({post}) => {
           </div>
         </div>
         <div>
-          <IoEllipsisVerticalSharp className='fntSz25' />
+          <IoEllipsisVerticalSharp className='fntSz25 text-black' />
         </div>
       </div>
       <div className='relative w-full postImageContainer'>
@@ -41,7 +41,7 @@ const SinglePost = ({post}) => {
       </div>
       <div className='flex justify-between items-center py-2 px-3'> 
         <div className='flex'>
-          <AiOutlineHeart className='fntSz25 mx-1' />
+          <AiOutlineHeart className='fntSz25 mx-1 ' />
           <FaRegComments className='fntSz25 mx-1' />
           <FiSend className='fntSz25 mx-1' />
         </div>

@@ -6,30 +6,29 @@ import {BiMoviePlay , BiBell} from "react-icons/bi"
 import {RiMessengerLine} from "react-icons/ri"
 import {FaRegCompass} from "react-icons/fa"
 import ThemeToggle from './ThemeToggle'
-import Chat from './Chat'
 
 const Sidebar = (props) => {
   return (
     <div className='w-full'>
         <div className='xs:hidden sm:hidden md:block'>
-            {/* <Image
+            <Image
                 src={AppLogo}
                 width={200}
                 height={100}
                 alt="logo"
                 style={{marginLeft:"10px"}}
                 className="cursor-pointer"
-            /> */}
-            <h2 style={{fontFamily:"cursive "}}>commune</h2>
+            />
+            <h2 className='px-2' style={{fontFamily:"cursive "}}>commune</h2>
         </div>
-        <ul className='m-0 p-0 fw500 hidden lg:block md:block sm:hidden xl:block xs:hidden duration-700 '> 
-            <li className='sidebarLink p-[10px_20px] rounded-[30px] flex items-center'><AiOutlineHome className='fntSz30 mr-1' />Home</li>
-            <li className='sidebarLink p-[10px_20px] rounded-[30px] flex items-center'><AiOutlineSearch className='fntSz30 mr-1' />Search</li>
-            <li className='sidebarLink p-[10px_20px] rounded-[30px] flex items-center'><BiMoviePlay className='fntSz30 mr-1' />Reels</li>
-            <li className='sidebarLink p-[10px_20px] rounded-[30px] flex items-center'><RiMessengerLine className='fntSz30 mr-1' />Message</li>
-            <li className='sidebarLink p-[10px_20px] rounded-[30px] flex items-center'><BiBell className='fntSz30 mr-1' />Notifications</li>
-            <li className='sidebarLink p-[10px_20px] rounded-[30px] flex items-center'><FaRegCompass className='fntSz30 mr-1' />Explore</li>
-            <li className='sidebarLink p-[10px_20px] rounded-[30px] flex items-center'  onClick={()=>props.logout}><FaRegCompass className='fntSz30 mr-1' />Logout</li>\
+        <ul className='m-0 p-0 fw500 hidden lg:block md:block sm:hidden xl:block xs:hidden duration-700'> 
+            <li className='sidebarLink p-[10px_20px] flex items-center'><AiOutlineHome className='fntSz30 mr-2' />Home</li>
+            <li className='sidebarLink p-[10px_20px] flex items-center'><AiOutlineSearch className='fntSz30 mr-2' />Search</li>
+            <li className='sidebarLink p-[10px_20px] flex items-center'><BiMoviePlay className='fntSz30 mr-2' />Reels</li>
+            <li className='sidebarLink p-[10px_20px] flex items-center'><RiMessengerLine className='fntSz30 mr-2' />Message</li>
+            <li className='sidebarLink p-[10px_20px] flex items-center'><BiBell className='fntSz30 mr-2' />Notifications</li>
+            <li className='sidebarLink p-[10px_20px] flex items-center'><FaRegCompass className='fntSz30 mr-2' />Explore</li>
+            <li className='sidebarLink p-[10px_20px] flex items-center'  onClick={()=>props.logout}><FaRegCompass className='fntSz30 mr-2' />Logout</li>
         </ul>
         <ul className='m-0 p-0 px-2 fw500 block lg:hidden md:hidden sm:block xl:hidden xs:block duration-700 mt-3'> 
             <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><AiOutlineHome className='fntSz30' /></li>
@@ -40,9 +39,8 @@ const Sidebar = (props) => {
             <li className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px]'><FaRegCompass className='fntSz30' /> </li>
         </ul>
 
-        <div className='absolute bottom-2 w-full'>
+        <div className='absolute bottom-2 w-full block lg:hidden md:hidden sm:block xl:hidden xs:block duration-700 px-2'>
             <div className='sidebarLink h-[50] w-[50] rounded-[8px] p-[10px] '><ThemeToggle className='fntSz30' /></div>
-
         </div>
 
         <style jsx>
@@ -57,7 +55,7 @@ const Sidebar = (props) => {
                 font-weight:bold;
                 transition:all 0.1s linear
             }
-            .bottomBar{
+            .bottomBar{ c
                 background-color:var(--sidebar-bg)
             }
             `}
@@ -66,4 +64,4 @@ const Sidebar = (props) => {
   )
 }
 
-export default Sidebar
+export default Sidebar;

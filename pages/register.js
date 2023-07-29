@@ -34,15 +34,16 @@ const Register = () => {
 
                         if(password === confirmPassword){
                             const payload = {
-                                name: username,
+                                username: username,
                                 phone:Number(phone) ,
                                 email:email ,
                                 password:password
                             }
+
                             const res = await registrationApi(payload)
-                            // if(res.status === 200){
-                            //     alert(res.data.message )
-                            // }
+                            if(res.status === 200){
+                                alert(res.data.message )
+                            }
                             router.push("/login")
 
                         }else{

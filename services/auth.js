@@ -1,4 +1,4 @@
-const url = "http://localhost:9090"
+const url = "http://localhost:7070"
 import axios from "axios"
 import Cookies from "js-cookie"
 
@@ -37,7 +37,7 @@ export const postWithToken = async (endpoint, data, otherHeaders, apiConfig = {}
 
 export const registrationApi = async (payload) =>{
     const res = await axios({
-        method:"post",
+        method:"POST",
         url:`${url}/auth/registration`,
         headers: { "Content-Type": "application/json" },
         data:JSON.stringify(payload)
@@ -47,7 +47,7 @@ export const registrationApi = async (payload) =>{
 
 export const loginApi =async (payload) =>{
     const res = await axios({
-        method:"post",
+        method:"POST",
         url:`${url}/auth/login`,
         headers: { "Content-Type": "application/json" },
         data:JSON.stringify(payload),

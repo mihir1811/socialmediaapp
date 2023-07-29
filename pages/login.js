@@ -23,16 +23,17 @@ const Login = () => {
             password: "",
           }}
           onSubmit={async (values) => {
-            // const { email, password } = values;
-            // const payload = {
-            //   email,
-            //   password,
-            // };
-            // const res = await loginApi(payload);
-            // // Cookies.set("jwtToken" ,  res.data.token)
+            const { email, password } = values;
+            const payload = {
+              email,
+              password,
+            };
+            const res = await loginApi(payload);
+            // Cookies.set("jwtToken" ,  res.data.token)
+            comsole.log(res.data.token)
             // console.log(res , "aergaerjthsryjndethgf")
             // console.log(res.data.token , "atrhszrytdgf")
-            router.push("/home");
+            // router.push("/home");
           }}
           // validationSchema={Yup.object().shape({
           //   email: Yup.string().email("Invalid Email").required("email is Required"),
